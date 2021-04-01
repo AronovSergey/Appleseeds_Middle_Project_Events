@@ -1,5 +1,8 @@
 # Planning and Scheduling
 
+# General information about your site
+* netlify link: events-calender.netlify.app
+
 # Apis that I'm going to use
 * Eventbrite - Find events
 * Picatic - Sell tickets anywhere
