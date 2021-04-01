@@ -14,5 +14,5 @@
 
 
 # Schema
-![Optional Text](./public/images/Screen Shot 2021-04-01 at 15.21.50.png);
-![Optional Text](./public/images/Screen Shot 2021-04-01 at 15.22.54.png);
+![Optional Text](./public/images/schema-1.png);
+![Optional Text](./public/images/schema-2.png);
