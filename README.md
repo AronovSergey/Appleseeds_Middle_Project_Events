@@ -14,5 +14,5 @@
 
 
 # Schema
-![Optional Text](./public/images/schema-1.png);
-![Optional Text](./public/images/schema-2.png);
+![Optional Text](./public/images/schema-01.png);
+![Optional Text](./public/images/schema-02.png);
