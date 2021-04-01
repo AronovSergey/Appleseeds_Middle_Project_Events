@@ -12,7 +12,15 @@
     * Google Calendar - Display, create and modify Google calendar events
     * Hebrew Calendar - Convert between Gregorian and Hebrew, fetch Shabbat and Holiday times, etc
 
+# Application Functionality
+* All events will be displayed in the calendar on the main page, clicking on any event will take the user to a new page where all the details will appear.
+* Moving back and forth in the timeline.
+* Add events to your user list, using a local storge.
+* A variety of filtering options. 
+* A search option.
+* Add an event to Google Calendar.
+* Using the user's geographic location.
 
 # Schema
 ![Optional Text](./public/images/schema-01.png);
-![Optional Text](./public/images/schema-02.png);
+![Optional Text](./public/images/schema-02.png)
