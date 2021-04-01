@@ -1,6 +1,6 @@
 # Planning and Scheduling
 
-# General information about your site
+# General information about my site
 * netlify link: events-calender.netlify.app
 
 # Apis that I'm going to use
