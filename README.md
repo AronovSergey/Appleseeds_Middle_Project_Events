@@ -1,7 +1,7 @@
 # Planning and Scheduling
 
 # General information about my site
-* netlify link: [netlify](https://events-calender.netlify.app "https://events-calender.netlify.app")
+* netlify link: [netlify](https://mine-events.netlify.app "https://mine-events.netlify.app/")
 
 # Apis that I'm going to use
 * Eventbrite - Find events
