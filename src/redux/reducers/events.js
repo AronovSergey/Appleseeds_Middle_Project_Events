@@ -1,4 +1,4 @@
-import { UPDATE_EVENTS_LIST } from "../actionTypes";
+import { FETCH_EVENTS } from '../actionTypes';
 
 const initialState = {
   events: [],
@@ -6,10 +6,10 @@ const initialState = {
 
 export default function eventsReducer(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_EVENTS_LIST: {
-      return state;
+    case FETCH_EVENTS: {
+      return { events: action.payload.events };
     }
     default:
       return state;
   }
-}
+} 
