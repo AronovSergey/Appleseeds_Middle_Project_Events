@@ -2,7 +2,9 @@ import React, { useState ,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { fetchEvents } from '../../redux/actions'
-import EventsSection from '../eventsSection/EventsSection';
+import Events from './events/Events';
+import EventsSideBar from './eventsSideBar/EventsSideBar';
+import './style.css';
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -13,8 +15,9 @@ const MainPage = () => {
   }, [dispatch, page]);
 
     return (
-        <div>
-            <EventsSection />
+        <div className="events-container">
+            <Events/>
+            <EventsSideBar />
         </div>
     )
 }

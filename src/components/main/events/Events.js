@@ -2,18 +2,16 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import Event from '../event/Event';
-import './style.css'
 
-
-const EventsSection = () => {
+const Events = () => {
     const { events } = useSelector(state => state.events);
 
     return (
-        <div className="events-section">            
+        <div className="events">            
             {events.map(event => <Event key={event.id} data={ event }/>)}
         </div>
     )
 }
 
-export default EventsSection;
+export default Events;
 

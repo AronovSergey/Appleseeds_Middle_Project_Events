@@ -1,6 +1,6 @@
 import ticketMaster from '../apis/ticketMaster';
 
-import { FETCH_EVENTS } from './actionTypes';
+import { FETCH_EVENTS, UPDATE_HOVERED_EVENT } from './actionTypes';
 
 export const fetchEvents = (page) => async dispatch => {
     const { data } = await ticketMaster.get('/events.json', { 
@@ -18,3 +18,10 @@ export const fetchEvents = (page) => async dispatch => {
         payload: { events },
     });
 };
+
+export const changeHoveredEvent = (event) => dispatch => {
+    dispatch ({ 
+        type: UPDATE_HOVERED_EVENT,
+        payload: { event }
+    });
+}
