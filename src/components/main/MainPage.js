@@ -1,7 +1,8 @@
 import React, { useState ,useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { fetchEvents } from '../../redux/actions'
+import EventsSection from '../eventsSection/EventsSection';
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const MainPage = () => {
 
     return (
         <div>
-            Main Page
+            <EventsSection />
         </div>
     )
 }
