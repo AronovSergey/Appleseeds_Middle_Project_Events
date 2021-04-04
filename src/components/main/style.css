@@ -1,12 +1,16 @@
+.main {
+    background: #5D5C61;
+    color: #EEE;
+    margin: 2%;
+    padding: 2%;
+}
+ 
 .events-container {
     display: flex;
     align-self: center;  
     justify-content: center;
     text-align: center;
-    background: #5D5C61;
-    color: #EEE;
-    margin: 2%;
-    padding: 2%;
+    width: 100%;
 }
 
 .events {
@@ -15,7 +19,7 @@
     grid-gap: 0 5px;
     grid-auto-rows: 10px;
     width: 70%;
-    border-right: 1px dashed #888;
+    border-right: 1px dashed #EEE;
 }
 
 .events img {
