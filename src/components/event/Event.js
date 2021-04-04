@@ -5,6 +5,7 @@ const Event = ({ data }) => {
     let height = data.images[0].height;
     let width = data.images[0].width;
 
+
     if(width > 250) {
         height /= (width / 250);
         width = 250;

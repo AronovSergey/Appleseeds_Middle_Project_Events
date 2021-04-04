@@ -10,7 +10,7 @@ const EventsSection = () => {
 
     return (
         <div className="events-section">            
-            {events.map(event => <Event data={ event }/>)}
+            {events.map(event => <Event key={event.id} data={ event }/>)}
         </div>
     )
 }
