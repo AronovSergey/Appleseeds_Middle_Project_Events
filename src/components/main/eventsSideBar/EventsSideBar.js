@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const EventsSideBar = () => {
     const { hoveredEvent } = useSelector(state => state.events);
-
+    
     if(hoveredEvent.name){
         return (
             <div className="sidebar">
@@ -12,7 +12,9 @@ const EventsSideBar = () => {
                     src={hoveredEvent.images[0].url} 
                     alt={hoveredEvent.name} 
                 />
-                <h2>{`${hoveredEvent.dates.start.localDate} : ${hoveredEvent.dates.start.localTime}`}</h2>
+                {hoveredEvent.dates && (
+                    <h2>{`${hoveredEvent.dates.start.localDate} : ${hoveredEvent.dates.start.localTime}`}</h2>
+                )}
             </div>
         )
     }
