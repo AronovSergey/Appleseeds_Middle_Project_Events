@@ -6,7 +6,7 @@ import EventsSection from '../eventsSection/EventsSection';
 
 const MainPage = () => {
   const dispatch = useDispatch();
-  const [page, setPage] = useState(2);
+  const [page] = useState(2);
 
   useEffect(() => {
     dispatch(fetchEvents(page))
