@@ -1,10 +1,23 @@
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import Header from "./header/Header";
 import MainPage from "./main/MainPage";
-import "./App.css"
+import Footer from "./footer/ Footer";
+import "./App.css";
+
 
 function App() {
   return (
     <div >
-      <MainPage />
+      <BrowserRouter>
+        <div>
+            <Header />
+            <Switch>
+                <Route path="/" exact component={MainPage} />
+            </Switch>
+            <Footer />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

@@ -5,9 +5,6 @@ import Pagination from '@material-ui/lab/Pagination';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
         marginTop: "1.6rem",
     },
 }));
@@ -27,7 +24,7 @@ const Pages = ({ page, setPage }) => {
     }, [page])
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root + ' center'}>
             <Pagination 
                 count={numberOfPages}
                 color="secondary"

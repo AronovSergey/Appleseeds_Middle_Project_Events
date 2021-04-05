@@ -13,7 +13,7 @@ const MineBreadcrumbs = ({ type, setType, setPage }) => {
     }
 
     return (
-        <div className="breadcrumb">
+        <div className="breadcrumb center">
             <Breadcrumbs aria-label="breadcrumb" >
             <span 
                 className={`${type === 'events' ? 'textPrimary' : 'inherit'}`}

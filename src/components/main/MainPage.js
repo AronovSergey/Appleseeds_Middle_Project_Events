@@ -29,7 +29,7 @@ const MainPage = () => {
         setType={setType}
         setPage={setPage}
       />
-      <div className="events-container">
+      <div className="center">
         <Events />
         <EventsSideBar />
       </div>

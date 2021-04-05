@@ -1,16 +1,8 @@
 .main {
-    background: #5D5C61;
+    background: #272727;
     color: #EEE;
-    margin: 2% 0;
+    margin: 4% 0;
     padding: 2%;
-}
- 
-.events-container {
-    display: flex;
-    align-self: center;  
-    justify-content: center;
-    text-align: center;
-    width: 100%;
 }
 
 .events {
@@ -44,9 +36,6 @@
 }
 
 .breadcrumb {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     padding-bottom: 1.4rem;
 }
 
