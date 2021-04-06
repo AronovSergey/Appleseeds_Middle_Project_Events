@@ -22,7 +22,10 @@ const SpecificEventPage = () => {
                 <div className="specific-event-data">
                     <h1>{event.name}</h1>
                     <h4>{`Genre: ${event.classifications[0].segment.name} - ${event.classifications[0].genre.name} - ${event.classifications[0].subGenre.name}`}</h4>
-                    <h4>{`Event Date: ${event.dates.start.localDate} - ${event.dates.start.localTime}`}</h4>
+                    
+                    {event.dates && (
+                        <h4>{`Event Date: ${event.dates.start.localDate} - ${event.dates.start.localTime}`}</h4>
+                    )}
                 </div>
             </div>
         );
