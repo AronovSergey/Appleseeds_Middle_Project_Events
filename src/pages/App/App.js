@@ -1,10 +1,10 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from "./header/Header";
-import Navbar from "./navbar/Navbar";
-import MainPage from "./main/MainPage";
-import Footer from "./footer/ Footer";
-import SpecificEventPage from "./specificEventPage/SpecificEventPage";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/navbar/Navbar";
+import ListOfAllEvents from "../ListOfAllEvents/ListOfAllEvents";
+import Footer from "../../components/footer/ Footer";
+import SpecificEventPage from "../SpecificEvent/SpecificEvent";
 import "./App.css";
 
 
@@ -19,7 +19,7 @@ function App() {
               <Navbar />
             </div>
             <Switch>
-                <Route path="/" exact component={MainPage} />
+                <Route path="/list-of-all-events" exact component={ListOfAllEvents} />
                 <Route path="/events/:id" exact component={SpecificEventPage} />
             </Switch>
             <Footer />

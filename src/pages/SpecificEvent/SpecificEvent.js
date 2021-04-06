@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 
 import './style.css';
-import { changeSelectedEvent } from './../../redux/actions';
+import { changeSelectedEvent } from '../../redux/actions';
 
-const SpecificEventPage = () => {
+const SpecificEvent = () => {
     const { type } = useSelector(state => state.events);
     const { event } = useSelector(state => state.selectedEvent);
     const { id } = useParams()
@@ -22,9 +22,11 @@ const SpecificEventPage = () => {
                 <div className="specific-event-data">
                     <h1>{event.name}</h1>
                     <h4>{`Genre: ${event.classifications[0].segment.name} - ${event.classifications[0].genre.name} - ${event.classifications[0].subGenre.name}`}</h4>
-                    
                     {event.dates && (
                         <h4>{`Event Date: ${event.dates.start.localDate} - ${event.dates.start.localTime}`}</h4>
+                    )}
+                    {event._embedded && (
+                        <h4>{`Address: ${event._embedded.venues[0].address.line1}`}</h4>
                     )}
                 </div>
             </div>
@@ -34,4 +36,4 @@ const SpecificEventPage = () => {
         return <div>loading...</div>
 }
 
-export default SpecificEventPage;
+export default SpecificEvent;

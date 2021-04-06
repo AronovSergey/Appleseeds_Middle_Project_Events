@@ -2,16 +2,16 @@ import React, { useState ,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { fetchEvents, fetchNumberOfPages } from '../../redux/actions'
-import Events from '../events/Events';
-import EventsSideBar from '../eventsSideBar/EventsSideBar';
-import MineBreadcrumbs from '../mineBreadcrumbs/Breadcrumbs';
-import Pages from '../pages/Pages';
+import Events from '../../components/events/Events';
+import EventsSideBar from '../../components/hoveredEvent/HoveredEvent';
+import MineBreadcrumbs from '../../components/mineBreadcrumbs/Breadcrumbs';
+import Pages from '../../components/pagination/Pagination';
 import './style.css';
 
-const MainPage = () => {
+const ListOfAllEvents = () => {
   const dispatch = useDispatch();
   const [type, setType] = useState('events');
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     dispatch(fetchEvents(type, page));
@@ -41,4 +41,4 @@ const MainPage = () => {
   )
 }
 
-export default MainPage;
+export default ListOfAllEvents;

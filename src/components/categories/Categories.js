@@ -2,14 +2,14 @@ import React from 'react';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 
 
-const MineBreadcrumbs = ({ type, setType, setPage }) => {
+const Categories = ({ type, setType, setPage }) => {
     const onButtonClick = () => {
         if(type === 'events')
             setType('attractions');
         else 
             setType('events');
 
-        setPage(0);
+        setPage(1);
     }
 
     return (
@@ -28,4 +28,4 @@ const MineBreadcrumbs = ({ type, setType, setPage }) => {
     )
 }
 
-export default MineBreadcrumbs;
+export default Categories;

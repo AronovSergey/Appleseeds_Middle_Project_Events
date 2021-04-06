@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-const EventsSideBar = () => {
+const HoveredEvent = () => {
     const history = useHistory();
     const { hoveredEvent } = useSelector(state => state.events);
     
@@ -26,4 +26,4 @@ const EventsSideBar = () => {
     
 }
 
-export default EventsSideBar;
+export default HoveredEvent;

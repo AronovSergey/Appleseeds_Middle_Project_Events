@@ -23,6 +23,8 @@ const Navbar = () => {
         if(newValue === 0) 
             history.push("/");
         else if(newValue === 1) 
+            history.push("/list-of-all-events");
+        else if(newValue === 2) 
             history.push("/favorites");
     };
     
@@ -36,6 +38,7 @@ const Navbar = () => {
                 centered
             >
                 <Tab label="Main Page" />
+                <Tab label="List Of All Events" />
                 <Tab label="My Favorites" />
             </Tabs>
         </Paper>

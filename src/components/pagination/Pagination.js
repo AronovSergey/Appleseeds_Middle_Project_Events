@@ -9,18 +9,18 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Pages = ({ page, setPage }) => {
+const MinePagination = ({ page, setPage }) => {
     const classes = useStyles();
-    const[localPage, setLocalPage] = useState(page + 1);
+    const[localPage, setLocalPage] = useState(page);
     const { numberOfPages } = useSelector(state => state.events);
 
     const onPageChange = (event, value) => {
-        setPage(parseInt(value - 1));
+        setPage(parseInt(value));
         setLocalPage(parseInt(value));
     }
 
     useEffect(() =>{
-        setLocalPage(page + 1);
+        setLocalPage(page);
     }, [page])
 
     return (
@@ -35,4 +35,4 @@ const Pages = ({ page, setPage }) => {
     )
 }
 
-export default Pages;
+export default MinePagination;

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import Event from '../event/Event';
 
-const Events = () => {
+const EventsList = () => {
     const { events } = useSelector(state => state.events);
 
     return (
@@ -13,5 +13,5 @@ const Events = () => {
     )
 }
 
-export default Events;
+export default EventsList;
 
