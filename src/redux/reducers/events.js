@@ -3,7 +3,8 @@ import { FETCH_EVENTS, UPDATE_HOVERED_EVENT, FETCH_NUMBER_OF_PAGES } from '../ac
 const initialState = {
   events: [],
   hoveredEvent: {},
-  numberOfPages: 0
+  numberOfPages: 0, 
+  type: 'events'
 };
 
 export default function eventsReducer(state = initialState, action) {
@@ -24,7 +25,8 @@ export default function eventsReducer(state = initialState, action) {
     case FETCH_NUMBER_OF_PAGES: {
       return { 
         ...state,
-        numberOfPages: action.payload.numberOfPages
+        numberOfPages: action.payload.numberOfPages,
+        type: action.payload.type
       };
     }
     

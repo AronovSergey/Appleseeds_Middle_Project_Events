@@ -1,0 +1,27 @@
+.specific-event-container {
+    display: flex;
+    padding: 2rem;
+    background: #272727;
+    color: #EEE;
+}
+
+.specific-event-container img {
+    max-height: 60vh;
+    width: 30%;
+    margin: 1rem;
+}
+
+.specific-event-data {
+    width: 70%;
+}
+
+.specific-event-data h1{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.specific-event-data h4{
+    font-size: 20px;
+    padding: 2px
+}

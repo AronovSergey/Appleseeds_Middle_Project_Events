@@ -1,12 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const EventsSideBar = () => {
+    const history = useHistory();
     const { hoveredEvent } = useSelector(state => state.events);
     
     if(hoveredEvent.name){
         return (
-            <div className="sidebar">
+            <div className="sidebar" onClick={() => history.push(`/events/${hoveredEvent.id}`)}>
                 <h1>{hoveredEvent.name}</h1>
                 <img 
                     src={hoveredEvent.images[0].url} 

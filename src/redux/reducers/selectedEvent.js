@@ -1,4 +1,4 @@
-import { UPDATE_SELECTED_EVENT } from '../actionTypes';
+import { CHANGE_SELECTED_EVENT } from '../actionTypes';
 
 const initialState = {
   event: {},
@@ -6,8 +6,11 @@ const initialState = {
 
 export default function selectedEventReducer(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_SELECTED_EVENT: {
-      return state;
+    case CHANGE_SELECTED_EVENT: {
+      return {
+        ...state,
+        event: action.payload.event
+      };
     }
     default:
       return state;

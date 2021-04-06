@@ -2,10 +2,10 @@ import React, { useState ,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { fetchEvents, fetchNumberOfPages } from '../../redux/actions'
-import Events from './events/Events';
-import EventsSideBar from './eventsSideBar/EventsSideBar';
-import MineBreadcrumbs from './mineBreadcrumbs/Breadcrumbs';
-import Pages from './pages/Pages';
+import Events from '../events/Events';
+import EventsSideBar from '../eventsSideBar/EventsSideBar';
+import MineBreadcrumbs from '../mineBreadcrumbs/Breadcrumbs';
+import Pages from '../pages/Pages';
 import './style.css';
 
 const MainPage = () => {
