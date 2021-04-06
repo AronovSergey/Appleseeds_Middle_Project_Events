@@ -15,8 +15,6 @@ const SpecificEventPage = () => {
         dispatch(changeSelectedEvent(type, id));
     }, [dispatch, type, id]);
 
-    console.log(event);
-
     if(event.name){
         return (
             <div className="specific-event-container">
