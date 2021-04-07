@@ -5,10 +5,12 @@
 * Technology Wise:
     * React.js
     * Redux.js (redux-thunk, actions, reducers, store)
+    * React-Ruter
     * Purely functional components ( useState, useEffect, useDispatch, useSelector, etc..)
     * Material-UI
     * CURD opertions with Local Storage
     * Axios && web API's
+
 
 # Apis that I'm going to use
 * Eventbrite - Find events
