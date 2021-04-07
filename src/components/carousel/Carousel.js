@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { useHistory } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,6 +41,7 @@ function SamplePrevArrow(props) {
 }
 
 const Carousel = ({ arr }) => {
+    const history = useHistory();
     return (
         <div className="carousel">
             {arr.length > 0 && (
@@ -53,6 +55,7 @@ const Carousel = ({ arr }) => {
                             <img 
                                 src={event.images[5].url} 
                                 alt={event.name}
+                                onClick={() => history.push(`/events/${event.id}`)}
                                 className="event-container__img center" 
                             />
                             {event.dates && (
