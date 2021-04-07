@@ -57,3 +57,18 @@
 .breadcrumb span {
     cursor: pointer;
 }
+
+/* Phone */
+@media (max-width: 600px) {
+    .events {
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+    }
+    
+    .events img {
+        max-width: 80px;
+    }
+
+    .sidebar * {
+        font-size:20px;
+    }
+}

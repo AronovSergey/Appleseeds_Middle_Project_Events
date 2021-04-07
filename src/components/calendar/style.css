@@ -83,7 +83,7 @@
 
 .monitor-container button{
     border: unset;
-    background-color: #565759;
+    background-color: #1E1F21;
     height: 28px;
     margin-right: 2px;
     padding: 6px 12px;
@@ -92,4 +92,17 @@
     font-weight: bold;
     cursor: pointer;
     outline: unset;
+}
+
+
+/* Phone */
+@media (max-width: 600px) {
+    .calendar-cell {
+        min-width: 50px;
+        min-height: 30px;
+    }
+
+    .event {
+        font-size: 4px;
+    }
 }

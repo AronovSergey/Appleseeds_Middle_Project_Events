@@ -49,16 +49,18 @@ const Carousel = ({ arr }) => {
                             className="event-container center"
                             key={`${event.id}carousel`}
                         >
-                            <div>{event.name}</div>
+                            <h1>{event.name}</h1>
                             <img 
                                 src={event.images[5].url} 
                                 alt={event.name}
                                 className="event-container__img center" 
                             />
                             {event.dates && (
-                                <h2>{`${event.dates.start.localDate} : ${event.dates.start.localTime}`}</h2>
+                                <h4>{`${event.dates.start.localDate} : ${event.dates.start.localTime}`}</h4>
                             )}
-                            <LikeButton event={event}/>
+                            <div className="like-button">
+                                <LikeButton event={event}/>
+                            </div>
                         </div>
                     ))}
                 </Slider>

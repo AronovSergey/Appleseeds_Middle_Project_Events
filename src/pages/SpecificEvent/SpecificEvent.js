@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 import LikeButton from '../../components/likeButton/LikeButton';
 import { changeSelectedEvent } from '../../redux/actions';
+import Spinner from '../../components/spinner/Spinner';
 
 const SpecificEvent = () => {
     const { type } = useSelector(state => state.events);
@@ -40,7 +41,7 @@ const SpecificEvent = () => {
         );
     }
     else    
-        return <div>loading...</div>
+        return <Spinner />
 }
 
 export default SpecificEvent;

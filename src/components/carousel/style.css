@@ -1,7 +1,7 @@
 .carousel {
-    height: 70vh;
+    height: 60vh;
     width: 100%;
-    padding: 10rem;
+    padding-top: 4rem;
 }
 
 .event-container {
@@ -13,3 +13,16 @@
     margin-left: 30%;
     margin-top: 20px;
 }
+
+.like-button {
+    padding-right: 1rem;
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .carousel {
+        width: 75%;
+        margin-left: 10%;
+    }
+}
+  
