@@ -1,6 +1,4 @@
 import React from 'react';
-import moment from 'moment';
-
 
 const CalendarGrid = ({ startDay, currentDay }) => {
     const day =  startDay.clone().subtract(1, 'day');
@@ -11,6 +9,7 @@ const CalendarGrid = ({ startDay, currentDay }) => {
             {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
                 <div
                     className="calendar-cell calendar-header-cell"
+                    key={day}
                 >   
                     <div className={`day-wrapper`}>
                         {day}
