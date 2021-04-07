@@ -25,3 +25,10 @@
     font-size: 20px;
     padding: 2px
 }
+
+.specific-event-data button {
+    background-color: #272727;
+    cursor: pointer;
+    border: none;
+    margin-top: 60px;
+}

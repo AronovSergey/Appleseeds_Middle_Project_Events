@@ -8,6 +8,7 @@ import CalendarMonitor from './CalendarMonitor';
 const Calendar = () => {
     const [today, setToday] = useState(moment());
     const startOfMonth = today.clone().startOf('month').startOf('week');
+    
 
     const onPrevClick = () => {
         setToday(today.clone().subtract(1, 'month'))

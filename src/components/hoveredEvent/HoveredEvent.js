@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 const HoveredEvent = () => {
     const history = useHistory();
@@ -17,6 +18,13 @@ const HoveredEvent = () => {
                 {hoveredEvent.dates && (
                     <h2>{`${hoveredEvent.dates.start.localDate} : ${hoveredEvent.dates.start.localTime}`}</h2>
                 )}
+                <button>
+                    <FavoriteBorderIcon 
+                        fontSize="large"
+                        color="secondary"
+                        
+                    />
+                </button>
             </div>
         )
     }

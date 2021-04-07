@@ -29,11 +29,21 @@
     cursor: pointer;
 }
 
+.sidebar > * {
+    padding: 20px 0;
+}
+
 .sidebar img {
     max-width: 90%;
     height: auto;
     padding-right: 2%; 
     text-align: center;
+}
+
+.sidebar button {
+    background-color: #272727;
+    cursor: pointer;
+    border: none;
 }
 
 .breadcrumb {

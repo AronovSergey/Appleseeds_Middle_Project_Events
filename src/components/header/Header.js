@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -62,8 +62,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+    const [value, setValue] = useState("");
     const classes = useStyles();
     const history = useHistory();
+
+    const onKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            history.push(`/search/${value}`);
+        }
+    }
     
     return (
         <div className={classes.root}>
@@ -77,12 +84,15 @@ const Header = () => {
                             <SearchIcon />
                         </div>
                         <InputBase
-                        placeholder="Search…"
-                        classes={{
-                            root: classes.inputRoot,
-                            input: classes.inputInput,
-                        }}
-                        inputProps={{ 'aria-label': 'search' }}
+                            placeholder="Search…"
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputInput,
+                            }}
+                            inputProps={{ 'aria-label': 'search' }}
+                            value={value}
+                            onChange={e => setValue(e.target.value)}
+                            onKeyDown={onKeyDown}
                         />
                     </div>
                 </Toolbar>

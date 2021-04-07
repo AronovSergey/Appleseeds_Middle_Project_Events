@@ -1,8 +1,30 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 
 const CalendarGrid = ({ startDay, currentDay }) => {
+    const history = useHistory();
+    const { events } = useSelector(state => state.calendar);
     const day =  startDay.clone().subtract(1, 'day');
     const daysArray = [...Array(42)].map(() => day.add(1, 'day').clone());
+
+    const getSpecificDayEvents = (date) => {
+        let result = [];
+        
+        if(events.length > 0){
+            result = events.filter(event => event.dates.start.localDate === date.format('YYYY-MM-DD'));
+        }
+
+        if(result.length > 2)
+            result = result.slice(0, 3);
+
+        if (result.length > 0)
+            return (result);
+        return false;
+    }
+
+    getSpecificDayEvents(day);
 
     return (
         <div className="calendar-grid">
@@ -27,7 +49,17 @@ const CalendarGrid = ({ startDay, currentDay }) => {
                 >
                     <div className={`day-wrapper ${currentDay.isSame(day, 'day') ?"current-day" : ""}`}>
                         {day.format('D')}
+                        
                     </div>
+                    {getSpecificDayEvents(day) && getSpecificDayEvents(day).map(event => (
+                        <div
+                            className="event"
+                            key={`event${event.id}`}
+                            onClick={() => history.push(`/events/${event.id}`)}
+                        >
+                            {event.name.split(' ').slice(0, 5).join(' ')}
+                        </div>
+                    ))} 
                 </div>
             ))}
         </div>
