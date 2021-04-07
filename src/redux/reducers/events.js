@@ -1,10 +1,11 @@
-import { FETCH_EVENTS, UPDATE_HOVERED_EVENT, FETCH_NUMBER_OF_PAGES } from '../actionTypes';
+import { FETCH_EVENTS, UPDATE_HOVERED_EVENT, FETCH_NUMBER_OF_PAGES, UPDATE_FAVORITES } from '../actionTypes';
 
 const initialState = {
   events: [],
   hoveredEvent: {},
   numberOfPages: 0, 
-  type: 'events'
+  type: 'events',
+  update: 0,
 };
 
 export default function eventsReducer(state = initialState, action) {
@@ -27,6 +28,12 @@ export default function eventsReducer(state = initialState, action) {
         ...state,
         numberOfPages: action.payload.numberOfPages,
         type: action.payload.type
+      };
+    }
+    case UPDATE_FAVORITES: {
+      return { 
+        ...state,
+        update: state.update + action.payload.number
       };
     }
     

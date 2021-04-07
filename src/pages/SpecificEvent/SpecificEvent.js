@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { useSelector, useDispatch } from 'react-redux';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 import './style.css';
+import LikeButton from '../../components/likeButton/LikeButton';
 import { changeSelectedEvent } from '../../redux/actions';
 
 const SpecificEvent = () => {
@@ -31,13 +32,9 @@ const SpecificEvent = () => {
                     {event._embedded && (
                         <h4>{`Address: ${event._embedded.venues[0].address.line1}`}</h4>
                     )}
-                    <button className="center">
-                        <FavoriteBorderIcon
-                            fontSize="large"
-                            color="secondary"
-                            
-                        />
-                    </button>
+                    <div>
+                        <LikeButton event={event}/>
+                    </div>
                 </div>
             </div>
         );

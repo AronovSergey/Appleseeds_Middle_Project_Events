@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './style.css';
+import LikeButton from '../likeButton/LikeButton';
 
 const settings = {
     dots: true,
@@ -54,6 +55,10 @@ const Carousel = ({ arr }) => {
                                 alt={event.name}
                                 className="event-container__img center" 
                             />
+                            {event.dates && (
+                                <h2>{`${event.dates.start.localDate} : ${event.dates.start.localTime}`}</h2>
+                            )}
+                            <LikeButton event={event}/>
                         </div>
                     ))}
                 </Slider>

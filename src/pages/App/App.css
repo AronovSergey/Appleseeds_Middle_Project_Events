@@ -30,3 +30,13 @@ body {
     text-align: center;
     width: 100%;
 }
+
+a, button, :visited {
+    outline: 0;
+    outline: none;
+}
+
+:hover, :active, :focus {
+    outline: 0;
+    outline: none;
+}

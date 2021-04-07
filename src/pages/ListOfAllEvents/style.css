@@ -33,6 +33,10 @@
     padding: 20px 0;
 }
 
+.sidebar div > * {
+    padding: 20px 0;
+}
+
 .sidebar img {
     max-width: 90%;
     height: auto;

@@ -28,11 +28,9 @@ export const removeEventFromLocal = (event) => {
 
 
 export const inFavorites = (event) => {
-    console.log(event);
     const json = localStorage.getItem('myFavorites');
     let data = JSON.parse(json);
     data = data.filter(currntEvent => currntEvent.id === event.id); 
-    console.log(data);
     if(data.length > 0)
         return true;
     return false;
