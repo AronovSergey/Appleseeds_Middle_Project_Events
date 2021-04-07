@@ -22,11 +22,10 @@ function SampleNextArrow(props) {
             className={className}
             onClick={onClick}
         >
-            <FaChevronRight size={50} color={'white'} />
+            <FaChevronRight size={50} color={'black'} />
         </div>
     );
 }
-
 function SamplePrevArrow(props) {
     const { className, onClick } = props;
     return (
@@ -34,7 +33,7 @@ function SamplePrevArrow(props) {
             className={className}
             onClick={onClick}
         >
-            <FaChevronLeft size={50} color={'white'} />
+            <FaChevronLeft size={50} color={'black'} />
         </div>
     );
 }
@@ -52,7 +51,8 @@ const Carousel = ({ arr }) => {
                             <div>{event.name}</div>
                             <img 
                                 src={event.images[5].url} 
-                                alt={event.name} 
+                                alt={event.name}
+                                className="event-container__img center" 
                             />
                         </div>
                     ))}
