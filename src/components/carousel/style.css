@@ -1,0 +1,10 @@
+.carousel {
+    height: 60vh;
+    width: 100vw;
+    padding: 10rem;
+    background: red;
+}
+
+.event-container {
+    padding: 40px
+}

@@ -29,7 +29,6 @@ export const fetch200Events = () => async dispatch => {
 
 
 /* --------------- Events --------------- */
-
 export const fetchEvents = (type, page) => async dispatch => {
     const { data } = await ticketMaster.get(`/${type}.json`, { 
         params: {
