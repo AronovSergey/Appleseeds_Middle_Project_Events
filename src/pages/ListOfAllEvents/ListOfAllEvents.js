@@ -2,9 +2,9 @@ import React, { useState ,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { fetchEvents, fetchNumberOfPages } from '../../redux/actions'
-import Events from '../../components/events/Events';
-import EventsSideBar from '../../components/hoveredEvent/HoveredEvent';
-import MineBreadcrumbs from '../../components/mineBreadcrumbs/Breadcrumbs';
+import EventsList from '../../components/eventsList/EventsList';
+import HoveredEvent from '../../components/hoveredEvent/HoveredEvent';
+import Categories from '../../components/categories/Categories';
 import Pages from '../../components/pagination/Pagination';
 import './style.css';
 
@@ -24,14 +24,14 @@ const ListOfAllEvents = () => {
 
   return (
     <div className="main">
-      <MineBreadcrumbs 
+      <Categories 
         type={type}
         setType={setType}
         setPage={setPage}
       />
       <div className="center">
-        <Events />
-        <EventsSideBar />
+        <EventsList />
+        <HoveredEvent />
       </div>
       <Pages 
         setPage={setPage}
