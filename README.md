@@ -6,7 +6,7 @@
     * React.js
     * Redux.js (redux-thunk, actions, reducers, store)
     * React-Ruter
-    * Moment
+    * Moment.js
     * Purely functional components ( useState, useEffect, useDispatch, useSelector, etc..)
     * Material-UI
     * CURD opertions with Local Storage
