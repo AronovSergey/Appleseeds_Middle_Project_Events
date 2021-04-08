@@ -25,6 +25,7 @@
 
 .sidebar {
     width: 30%;
+    min-height: 65vh;
     text-align: center;
     cursor: pointer;
 }
